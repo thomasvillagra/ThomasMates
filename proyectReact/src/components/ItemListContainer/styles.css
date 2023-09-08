@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+p{
+    padding: 0px 20px;
+}
