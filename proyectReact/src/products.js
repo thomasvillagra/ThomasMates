@@ -1,50 +1,56 @@
 export const productos = [
     {
       id: 0,
-      nombre: "Smartphone Galaxy S21",
+      nombre: "Mate Camionero de acero",
       precio: 799.99,
-      categoria: "Teléfonos",
-      stock: 10,
-      descripcion: "El último smartphone de Samsung con pantalla AMOLED y cámara de alta resolución."
+      categoria: "Camionero",
+      stock: 3,
+      urlImage:'https://http2.mlstatic.com/D_NQ_NP_960786-MLA71166038783_082023-O.webp',
+      descripcion: "Mate estilo camionero con virola de acero."
     },
     {
       id: 1,
-      nombre: "Portátil MacBook Pro",
+      nombre: "Mate Torpedo de acero",
       precio: 1499.99,
-      categoria: "Portátiles",
+      categoria: "Torpedo",
       stock: 5,
-      descripcion: "Un potente portátil de Apple con pantalla Retina y procesador Intel Core i7."
+      urlImage:'https://http2.mlstatic.com/D_NQ_NP_756839-MLA52579210653_112022-O.webp',
+      descripcion: "Mate estilo torpedo con virola de acero."
     },
     {
       id: 2,
-      nombre: "TV LED 4K Sony",
+      nombre: "Mate Imperial de acero",
       precio: 699.99,
-      categoria: "Televisores",
+      categoria: "Imperial",
       stock: 8,
-      descripcion: "Un televisor Sony con resolución 4K y tecnología HDR para imágenes impresionantes."
+      urlImage:'https://http2.mlstatic.com/D_NQ_NP_975909-MLA71469381473_092023-O.webp',
+      descripcion: "Mate estilo Imperial con virola de acero."
     },
     {
       id: 3,
-      nombre: "Auriculares Inalámbricos Bose",
+      nombre: "Mate Camionero de alpaca",
       precio: 199.99,
-      categoria: "Auriculares",
+      categoria: "Imperial",
       stock: 15,
-      descripcion: "Auriculares inalámbricos con cancelación de ruido para una experiencia de sonido inmersiva."
+      urlImage:'https://http2.mlstatic.com/D_NQ_NP_869944-MLA50402611637_062022-O.webp',
+      descripcion: "Mate estilo Camionero con virola de alpaca"
     },
     {
       id: 4,
-      nombre: "Tablet iPad Air",
+      nombre: "Mate Torpedo de alpaca",
       precio: 499.99,
-      categoria: "Tabletas",
+      categoria: "Torpedo",
       stock: 12,
-      descripcion: "La última tablet de Apple con pantalla Liquid Retina y soporte para Apple Pencil."
+      urlImage:'https://http2.mlstatic.com/D_NQ_NP_801663-MLA54867716870_042023-O.webp',
+      descripcion: "Mate estilo Torpedo con virola de alpaca"
     },
     {
       id: 5,
-      nombre: "Cámara DSLR Canon EOS 80D",
+      nombre: "Mate Imperial de alpaca",
       precio: 899.99,
-      categoria: "Cámaras",
+      categoria: "Imperial",
       stock: 7,
-      descripcion: "Una cámara DSLR de Canon con sensor de alta resolución y grabación de video Full HD."
+      urlImage:'https://http2.mlstatic.com/D_NQ_NP_888954-MLA50401703290_062022-O.webp',
+      descripcion: "Mate estilo Imperial con virola de alpaca"
     },
 ];

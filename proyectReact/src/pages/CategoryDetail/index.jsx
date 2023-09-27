@@ -5,13 +5,13 @@ import Layout from "../../components/Layout/Layout";
 
 
 
-const ItemDetail = () =>{
-    const {idProduct} = useParams();
+const CategoryDetail = () =>{
+    const {categoryProduct} = useParams();
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     
-    const searchProduct = productos.find(
-        (productos) => productos.id === parseInt(idProduct)
+    const searchProduct = productos.filter(
+        (productos) => productos.categoria === (categoryProduct)
     );
     
     useEffect(()=>{
@@ -30,7 +30,7 @@ const ItemDetail = () =>{
             <>
                 <h1>{product.nombre}</h1><br/>
                 <img src={product.urlImage}/>
-                <p> volver al <Link to={"/"}>inicio</Link></p>
+                <p> volver al <Link to={"/category/:categoryProduct"}>inicio</Link></p>
 
             </>
             )
@@ -39,4 +39,4 @@ const ItemDetail = () =>{
     );
 };
 
-export default ItemDetail;
+export default CategoryDetail;
