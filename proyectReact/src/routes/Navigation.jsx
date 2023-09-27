@@ -12,7 +12,7 @@ const routes = createBrowserRouter([
         element: <ItemDetailContainer />, 
     },
     {
-        path:'/category/:categoryProduct',
+        path:'/category/:categoryId',
         element: <ItemListContainer />,
     }
 ])

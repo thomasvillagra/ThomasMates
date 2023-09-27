@@ -6,18 +6,18 @@ import Layout from "../../components/Layout/Layout";
 
 
 const CategoryDetail = () =>{
-    const {categoryProduct} = useParams();
+    const {categoryId} = useParams();
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     
-    const searchProduct = productos.filter(
-        (productos) => productos.categoria === (categoryProduct)
+    const searchProductCategory = productos.filter(
+        (productos) => productos.categoria === (categoryId)
     );
     
     useEffect(()=>{
         setTimeout(()=>{
-            console.log(searchProduct);
-            setProduct(searchProduct);
+            console.log(searchProductCategory);
+            setProduct(searchProductCategory);
             setIsLoading(false);
         },1000);
     },[]);

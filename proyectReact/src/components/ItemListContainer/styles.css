@@ -5,6 +5,16 @@
     gap: 10px;
 }
 
+.container ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container ul li{
+    padding: 20px;  
+    list-style: none;
+}
+
 p{
     padding: 0px 20px;
 }
