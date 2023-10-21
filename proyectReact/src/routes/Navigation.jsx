@@ -1,5 +1,5 @@
 import {createBrowserRouter , RouterProvider} from 'react-router-dom';
-import { ItemListContainer, ItemDetailContainer} from '../pages';
+import {CartPage, ItemListContainer, ItemDetailContainer} from '../pages';
 
 
 const routes = createBrowserRouter([
@@ -14,6 +14,10 @@ const routes = createBrowserRouter([
     {
         path:'/category/:categoryId',
         element: <ItemListContainer />,
+    },
+    {
+        path:'/cart',
+        element: <CartPage />
     }
 ])
 

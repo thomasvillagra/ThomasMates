@@ -1,13 +1,15 @@
-import {BsCartCheckFill} from 'react-icons/bs'
+import {BsCart} from 'react-icons/bs'
 import {Badge} from '@mui/material'
+import { useContext } from 'react'
+import { CartCtx } from '../../context/CartContext'
 
 const CartWidget = () =>{
-
+    const {cart} = useContext(CartCtx)
     return(
         <div>
-            <Badge badgeContent={1} color="primary">
-            <BsCartCheckFill size={30} color="action" />
-            </Badge>
+        <Badge color='secondary' badgeContent={cart.length} >
+            <BsCart size={25} />
+        </Badge>
         </div>
     )
 }

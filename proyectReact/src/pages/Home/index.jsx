@@ -1,36 +1,53 @@
-import { useEffect, useState } from "react"
 import Layout from "../../components/Layout/Layout";
 import Item from '../../components/Item/Item'
 import ItemList from "../../components/ItemList/ItemList";
 import { productos } from "../../products";
+import React, { useContext, useEffect, useState } from "react";
+import { CartCtx } from "../../context/CartContext";
+import { Ring } from "@uiball/loaders";
 
+const Child = React.memo(({ mensaje }) => {
+    console.log('Renderización de Child');
+    return <div>{mensaje}</div>;
+});
+  
+const ChildNoMemo = ({ mensaje }) => {
+    console.log('Renderización de Child NO MEMO');
+    return <div>{mensaje}</div>;
+}
 
 const Home = () => {
     const [isLoading, setIsLoading] = useState(true);
-    const [products, setProducts] = useState([]);
-
+    const { listProducts, setListProducts } = useContext(CartCtx);
+    const [es, setEs] = useState(true)
+    const [message, setMessage] = useState(0)
+    
     useEffect(()=>{
         setTimeout(()=>{
-            setProducts(productos);
+            setListProducts(productos);
             setIsLoading(false)
         },1000);
     },[]);
 
+    
+    const config = isLoading ? {
+        className: 'desactivate'
+    } : {}
+
     return(
         <Layout>
+        
             <ItemList>
-                {
-                    isLoading
-                    ?<p>La pagina esta cargando ...</p>
-                    : products.map(productos => (
-                        <Item 
-                        id={productos.id}
-                        imgUrl={productos.urlImage}
-                        nombre={productos.nombre}
-                        descripcion={productos.descripcion} 
-                        />
-                    ))
-                }
+                {isLoading && <Ring />}
+                {!isLoading && listProducts.map((productos) => (
+                <Item
+                    key={productos.id}
+                    id={productos.id}
+                    nombre={productos.nombre}
+                    descripcion={productos.descripcion}
+                />
+                ))}
+                
             </ItemList>
         </Layout>
     );

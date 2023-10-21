@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productos } from "../../products";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../Layout/Layout";
 
 
 
 const CategoryDetail = () =>{
-    const {categoryId} = useParams();
+    const {categoryId   } = useParams();
     const [product, setProduct] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     
